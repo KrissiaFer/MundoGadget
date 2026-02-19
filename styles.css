@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* HEADER */
+.header {
+  background: #f7941d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo {
+  margin: 0;
+  color: #e53935;
+}
+
+.search {
+  width: 40%;
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  flex: 1;
+  min-width: 200px;
+}
+
+.icons {
+  font-size: 22px;
+}
+
+/* NAV */
+.nav {
+  background: #f7941d;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 30px;
+  font-weight: bold;
+}
+
+/* GRID DE PRODUCTOS */
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 30px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celular */
+@media (max-width: 500px) {
+  .products-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* TARJETA ESTILO TIENDA REAL */
+.product-card {
+  background: #1b1f23;
+  border-radius: 12px;
+  padding: 14px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+  min-height: 340px;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+/* CONTENEDOR DE IMAGEN */
+.product-image {
+  background: white;
+  border-radius: 10px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.product-image img {
+  max-width: 90%;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+/* CATEGORIA */
+.product-category {
+  font-size: 12px;
+  color: #9aa4af;
+  margin-bottom: 2px;
+  text-align: left;
+}
+
+/* NOMBRE */
+.product-name {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* DESCRIPCIÓN */
+.product-description {
+  font-size: 13px;
+  color: #c7c7c7;
+  margin-top: 4px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+
+/* PRECIO */
+.product-price {
+  color: #00ff66;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: auto;
+  text-align: left;
+}
+
+/* STOCK */
+.product-stock {
+  font-size: 13px;
+  color: #9aa4af;
+  margin-top: 3px;
+  text-align: left;
+}
