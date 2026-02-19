@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mundo Gadget</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="logo">Mundo Gadget</h1>
+
+    <input 
+      type="text"
+      id="searchInput"
+      placeholder="Buscar productos..."
+      class="search"
+    >
+
+    <div class="icons">🛒 👤</div>
+  </header>
+
+  <!-- NAV FILTROS -->
+<nav class="nav">
+  <span data-filter="all">Todos</span>
+  <span data-filter="categorias">Categorías</span>
+  <span data-filter="ofertas">Ofertas</span>
+  <span data-filter="marcas">Marcas</span>
+</nav>
+
+
+
+  <!-- PRODUCTOS -->
+  <main class="products-container" id="productsContainer"></main>
+
+  <script src="script.js"></script>
+</body>
+</html>
