@@ -3,6 +3,7 @@ const searchInput = document.getElementById("searchInput");
 
 let products = [];
 let filteredProducts = [];
+let currentFilter = "all"; // valor del filtro de navegación
 
 /* ===== CARGAR PRODUCTOS DESDE JSON ===== */
 fetch("products.json")
@@ -56,7 +57,37 @@ function renderProducts(list) {
   });
 }
 
-/* ===== BUSCADOR ===== */
+/* ===== FILTROS Y BUSCADOR ===== */
+
+// Aplica el filtro de categoría y la búsqueda de texto
+function applyFilters() {
+  const query = searchInput.value.toLowerCase().trim();
+
+  // comienza por aplicar el filtro de categoría
+  if (currentFilter === "all") {
+    filteredProducts = [...products];
+  } else if (currentFilter === "ofertas") {
+    filteredProducts = products.filter(p => Number(p.price) < 100);
+  } else {
+    filteredProducts = products.filter(p =>
+      p.category && p.category.toLowerCase().trim() === currentFilter
+    );
+  }
+
+  // si hay texto en el buscador, filtra también por nombre/descripcion
+  if (query !== "") {
+    filteredProducts = filteredProducts.filter(p => {
+      const name = p.name ? p.name.toLowerCase() : "";
+      const desc = p.description ? p.description.toLowerCase() : "";
+      return name.includes(query) || desc.includes(query);
+    });
+  }
+
+  renderProducts(filteredProducts);
+}
+
+// manejador para los botones de nav
+
 document.querySelectorAll(".nav span").forEach(btn => {
   btn.addEventListener("click", () => {
 
@@ -77,4 +108,10 @@ document.querySelectorAll(".nav span").forEach(btn => {
 
     renderProducts(filteredProducts);
   });
+});
+
+// manejador del campo de búsqueda
+
+searchInput.addEventListener("input", () => {
+  applyFilters();
 });
