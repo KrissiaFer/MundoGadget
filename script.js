@@ -57,29 +57,24 @@ function renderProducts(list) {
 }
 
 /* ===== BUSCADOR ===== */
-searchInput.addEventListener("input", e => {
-  const text = e.target.value.toLowerCase();
-
-  filteredProducts = products.filter(product =>
-    product.name.toLowerCase().includes(text) ||
-    product.description.toLowerCase().includes(text)
-  );
-
-  renderProducts(filteredProducts);
-});
-
-/* ===== FILTROS ===== */
 document.querySelectorAll(".nav span").forEach(btn => {
   btn.addEventListener("click", () => {
-    const filter = btn.dataset.filter;
+
+    const filter = btn.dataset.filter.toLowerCase().trim();
 
     if (filter === "all") {
       filteredProducts = [...products];
-    } else {
-      filteredProducts = products.filter(p => p.category === filter);
+    }
+    else if (filter === "ofertas") {
+      filteredProducts = products.filter(p => Number(p.price) < 100);
+    }
+    else {
+      filteredProducts = products.filter(p =>
+        p.category &&
+        p.category.toLowerCase().trim() === filter
+      );
     }
 
     renderProducts(filteredProducts);
   });
 });
-

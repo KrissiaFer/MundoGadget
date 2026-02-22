@@ -5,7 +5,7 @@
     "description": "Monitor msi mag 274qf x24 pantalla 2k rapid ips 27p 240hz 0.5ms gtg hdmi dp amd freesync premium hdr",
     "price": 299,
     "stock": 7,
-    "category": "tecnologia",
+    "category": "monitor",
     "image": "https://api.zonadigitalsv.com/storage/products/imagen_generada698ced6495161.jpg"
   },
   {
@@ -14,7 +14,7 @@
     "description": "Monitor curvo ultrawide msi mag 346cq uwqhd panel va 34p 180hz 1ms mprt hdmi x2 dp hdr amd freesync premium",
     "price": 349.99,
     "stock": 5,
-    "category": "tecnologia",
+    "category": "monitor",
     "image": "https://api.zonadigitalsv.com/storage/products/imagen_generada698ca6622eeb8.jpg"
   },
   {
@@ -23,7 +23,7 @@
     "description": "Monitor portatil arzopa a1 gamut pantalla ips fhd 15.6p usb-c mini hdmi ultra slim",
     "price": 115,
     "stock": 25,
-    "category": "accesorios",
+    "category": "monitor",
     "image": "https://apizd.zonadigitalsv.com/storage/productos/07oe8MtXVQrw9OYZLi6OgbW7l3QCCCzrY6iVSzSn.png"
   },
   {
@@ -32,7 +32,7 @@
     "description": "Laptop lenovo ideapad slim3 15iru8 proc. intel core i7 1355u ram 16gb almacenamiento ssd 1tb pantalla tactil fhd 15.6p w11h 82x700huus",
     "price": 899.99,
     "stock": 4,
-    "category": "accesorios",
+    "category": "laptop",
     "image": "https://api.zonadigitalsv.com/storage/products/imagen_generada698f77c6cc3a0.jpg"
   },
   {
@@ -41,7 +41,7 @@
     "description": "Laptop asus rog strix g614pp-wh94 proc. ryzen 9 8940hx ram ddr5 16gb almacenamiento ssd 1tb rtx5070 8gb pantalla 16p wuxga w11h eclipse gray",
     "price": 2199,
     "stock": 9,
-    "category": "audio",
+    "category": "laptop",
     "image": "https://api.zonadigitalsv.com/storage/products/imagen_generada698c9f5a4eb78.jpg"
   }, 
   {
@@ -50,7 +50,7 @@
     "description": "Laptop hp victus 15-fa2082wm proc. intel core i5 13420h ram ddr4 16gb almacenamiento m.2 512gb rtx4050 6gb pantalla fhd ips 15.6p 144hz w11",
     "price": 150,
     "stock": 10,
-    "category": "tecnologia",
+    "category": "laptop",
     "image": "https://api.zonadigitalsv.com/storage/products/imagen_generada6936f32493d12.jpg"
   },
   {
@@ -59,7 +59,7 @@
     "description": "Impresor multifuncional inalambrico hp 580 con tanque de tinta 1f3y2a",
     "price": 229,
     "stock": 5,
-    "category": "tecnologia",
+    "category": "ofertas",
     "image": "https://apizd.zonadigitalsv.com/storage/productos/zjxobqKXeJV18Rw9Ucfama1cBWoej1Bv2Z0FQjl4.png"
   },
   {
@@ -68,7 +68,7 @@
     "description": "Impresor multifuncional inalambrico canon pixma g3170 con tanque",
     "price": 219,
     "stock": 25,
-    "category": "accesorios",
+    "category": "ofertas",
     "image": "https://apizd.zonadigitalsv.com/storage/productos/ikft1a5lIQG2eCHq9R1AS9OlVguC5hdZ90hNIydM.png"
   },
   {
@@ -77,7 +77,7 @@
     "description": "Teclado usb mecanico silencioso msi strike 600 rgb",
     "price": 99.99,
     "stock": 15,
-    "category": "accesorios",
+    "category": "ofertas",
     "image": "https://api.zonadigitalsv.com/storage/products/imagen_generada6982865b4fbe6.jpg"
   },
   {
@@ -86,16 +86,16 @@
     "description": "Teclado mecanico corsair k65 rgb mini ch-9194114-na sw cherry mx blanco",
     "price": 129.99,
     "stock": 12,
-    "category": "audio",
+    "category": "ofertas",
     "image": "https://api.zonadigitalsv.com/storage/products/imagen_generada6978ec3a4c316.jpg"
   },
   {
     "id": 11,
-    "name": "Monitor Gamer",
+    "name": "Teclado gamer",
     "description": "El teclado mecánico USB Razer BlackWidow V4 X RGB Pokémon Edition (modelo RZ03-04704200-R3M1, switches Green) ",
     "price": 169.99,
     "stock": 10,
-    "category": "tecnologia",
+    "category": "ofertas",
     "image": "https://apizd.zonadigitalsv.com/storage/productos/dZ5b3seF0nqvFL3ue5uMUo90ggwtld4ktK4sL89Q.png"
   },
   {
@@ -104,7 +104,7 @@
     "description": "Headset inalambrico ugreen hitune max5c hi-res audio anc hasta 75h ldac hp203 35757 negro",
     "price": 49.99,
     "stock": 5,
-    "category": "tecnologia",
+    "category": "audio",
     "image": "https://api.zonadigitalsv.com/storage/products/imagen_generada698a0907460f5.jpg"
   },
   {
@@ -113,7 +113,7 @@
     "description": "Headset inalambrico ugreen hitune max5c hi-res audio anc hasta 75h ldac hp203 35758 blanco",
     "price": 39.99,
     "stock": 25,
-    "category": "accesorios",
+    "category": "audio",
     "image": "https://api.zonadigitalsv.com/storage/products/imagen_generada698a07b25c9e3.jpg"
   },
   {
@@ -122,7 +122,7 @@
     "description": "RHeadset usb razer kraken v4 x rgb pokemon pc rz04-05180300-r3m1",
     "price": 34.99,
     "stock": 15,
-    "category": "accesorios",
+    "category": "audio",
     "image": "https://apizd.zonadigitalsv.com/storage/productos/kDXgkrUSCsSqDFXeujAEVkr9ZxnlEL9bH1jA4kz8.png"
   },
   {
@@ -131,7 +131,7 @@
     "description": "Consola sony playstation 5 slim edicion digital 4k hdr 1tb astro bot y gran turismo 7 ( latam)",
     "price": 699.99,
     "stock": 12,
-    "category": "audio",
+    "category": "ofertas",
     "image": "https://apizd.zonadigitalsv.com/storage/productos/3pmvU30B9cisaSx3JBTtI8YZjXV27ATjt0mROFmt.png"
   },
   {
@@ -140,7 +140,7 @@
     "description": "Control sony dualsense para playstation 5 death stranding2 edicion limitada",
     "price": 69.99,
     "stock": 12,
-    "category": "audio",
+    "category": "ofertas",
     "image": "https://apizd.zonadigitalsv.com/storage/productos/diuq5Mlz55dr1RA9Qst9CydCAPr1anYpgqvRJnGV.png"
   }
 ]
