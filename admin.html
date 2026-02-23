@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador - Mundo Gadget</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <header>
+        <h2 class="logo">Mundo Gadget</h2>
+        <div class="admin-label">ADMINISTRADOR</div>
+    </header>
+
+    <div class="container">
+
+        <aside class="menu">
+            <button id="btnOrdenes">Órdenes de compra</button>
+            <button id="btnClientes">Clientes registrados</button>
+            <button id="btnCerrar">Cerrar sesión</button>
+        </aside>
+
+        <main class="contenido">
+
+            <h1>¡Bienvenido Admin001!</h1>
+                        
+            <div class="resumen" id="resumen">
+                <div class="card">
+                    <h3>Total de productos</h3>
+                    <p id="totalProductos">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Ventas del día</h3>
+                    <p id="ventasDia">$0</p>
+                </div>
+            </div>
+
+            <div id="areaDinamica"></div>
+
+        </main>
+
+    </div>
+
+<script src="admin.js"></script>
+</body>
+</html>
