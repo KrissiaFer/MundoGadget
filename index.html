@@ -1,42 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Mundo Gadget</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mundo Gadget</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles_cart.css" />
+    <link rel="stylesheet" href="styles_notifications.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="logo">Mundo Gadget</h1>
 
-  <!-- HEADER -->
-  <header class="header">
-    <h1 class="logo">Mundo Gadget</h1>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Buscar productos..."
+        class="search"
+      />
 
-    <input 
-      type="text"
-      id="searchInput"
-      placeholder="Buscar productos..."
-      class="search"
-    >
+      <div class="icons">
+        <span id="cart-btn" style="cursor: pointer; position: relative">
+          🛒
+          <span
+            id="cart-count"
+            style="
+              background: red;
+              color: white;
+              border-radius: 50%;
+              padding: 2px 6px;
+              font-size: 12px;
+              position: absolute;
+              top: -10px;
+              right: -10px;
+            "
+            >0</span
+          >
+        </span>
+        <a
+          href="login.html"
+          style="color: white; text-decoration: none; margin-left: 15px"
+          >👤 Ingresar</a
+        >
+        <a
+          href="registro.html"
+          style="color: white; text-decoration: none; margin-left: 15px"
+          >📝 Registro</a
+        >
+      </div>
+    </header>
 
-    <div class="icons">🛒 
-      <a href="login.html" style="color: white; text-decoration: none; margin-left: 15px;">👤 Ingresar</a>
-      <a href="registro.html" style="color: white; text-decoration: none; margin-left: 15px;">📝 Registro</a>
+    <!-- NAV FILTROS -->
+    <div class="nav">
+      <span data-filter="all">Todos</span>
+      <span data-filter="monitor">Monitores</span>
+      <span data-filter="laptop">Laptops</span>
+      <span data-filter="audio">Audio</span>
+      <span data-filter="ofertas">Ofertas</span>
     </div>
-  </header>
 
-  <!-- NAV FILTROS -->
-<div class="nav">
-  <span data-filter="all">Todos</span>
-  <span data-filter="monitor">Monitores</span>
-  <span data-filter="laptop">Laptops</span>
-  <span data-filter="audio">Audio</span>
-  <span data-filter="ofertas">Ofertas</span>
-</div>
+    <!-- PRODUCTOS -->
+    <main class="products-container" id="productsContainer"></main>
 
-  <!-- PRODUCTOS -->
-  <main class="products-container" id="productsContainer"></main>
+    <!-- MODAL CARRITO (Agregado por RR) -->
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Carrito de Compras</h2>
+        <div id="cart-items-container"></div>
+        <div class="cart-footer">
+          <h3>Total: $<span id="cart-total">0.00</span></h3>
+          <button
+            id="clear-cart-btn"
+            style="
+              background-color: #f44336;
+              color: white;
+              padding: 10px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              margin-right: 10px;
+            "
+          >
+            Vaciar Carrito
+          </button>
+          <button id="checkout-btn" class="btn-checkout">
+            Generar Factura
+          </button>
+        </div>
+      </div>
+    </div>
 
-  <script src="script.js"></script>
-</body>
+    <!-- MODAL FACTURA (Agregado por RR) -->
+    <div id="invoice-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="invoice-close">&times;</span>
+        <div id="invoice-content"></div>
+        <div style="text-align: center; margin-top: 20px">
+          <button id="confirm-purchase-btn" class="btn-checkout">
+            Confirmar y Cerrar
+          </button>
+          <button
+            id="back-to-cart-btn"
+            style="padding: 10px; margin-left: 10px"
+          >
+            Volver
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification Container (Agregado por RR) -->
+    <div id="notification-container"></div>
+
+    <!-- Scripts del carrito y notificaciones (Agregado por RR) -->
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,0 +1,68 @@
+/* 
+  Autor: Roger Ramirez (RR)
+  Descripción: Estilos para las notificaciones tipo toast
+*/
+
+/* Contenedor principal de notificaciones */
+#notification-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none; /* Permite hacer clic a través del contenedor vacío */
+}
+
+/* Notificación individual */
+.notification {
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 280px;
+  max-width: 400px;
+  
+  /* Animaciones */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.3s forwards, fadeOut 0.3s forwards 2.7s;
+  pointer-events: auto; /* Reactivar clics en la notificación */
+}
+
+/* Variantes de color */
+.notification.success {
+  background-color: #43a047; /* Verde material design */
+  border-left: 5px solid #2e7d32;
+}
+
+.notification.error {
+  background-color: #e53935; /* Rojo material design */
+  border-left: 5px solid #c62828;
+}
+
+.notification.info {
+  background-color: #1e88e5; /* Azul material design */
+  border-left: 5px solid #1565c0;
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación de salida */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

@@ -1,0 +1,157 @@
+/* 
+  Autor: Roger Ramirez (RR)
+  Descripción: Estilos para el modal del carrito, facturas y botones relacionados
+*/
+
+/* ===== MODAL GENERAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente oscuro */
+  backdrop-filter: blur(2px); /* Efecto blur moderno */
+}
+
+/* Contenido del Modal */
+.modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;
+  padding: 25px;
+  border: none;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-out;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botón Cerrar (X) */
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover,
+.close:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+/* ===== ELEMENTOS DEL CARRITO ===== */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 15px 0;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.cart-item:hover {
+  background-color: #fafafa;
+}
+
+.cart-item-info h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Controles de cantidad y eliminar */
+.cart-item-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.cart-item-controls input {
+  width: 50px;
+  padding: 6px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.remove-btn {
+  background-color: transparent;
+  border: 1px solid #e53935;
+  color: #e53935;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.9em;
+  transition: all 0.2s;
+}
+
+.remove-btn:hover {
+  background-color: #e53935;
+  color: white;
+}
+
+/* Pie del carrito */
+.cart-footer {
+  margin-top: 25px;
+  text-align: right;
+  border-top: 2px solid #f0f0f0;
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-footer h3 {
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Botones de acción */
+.btn-checkout, button#checkout-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-checkout:hover {
+  background-color: #45a049;
+}
+
+/* ===== ESTILOS FACTURA ===== */
+#invoice-content {
+  padding: 20px;
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.invoice-totals {
+  text-align: right;
+  margin: 5px 0;
+  font-size: 1em;
+  color: #333;
+}
