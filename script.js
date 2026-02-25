@@ -188,6 +188,28 @@ document.querySelectorAll(".nav span").forEach((btn) => {
   });
 });
 
+function crearEnvio(orden, datosEnvio) {
+  if (!orden) {
+    alert("No existe una orden válida");
+    return null;
+  }
+
+  const envio = {
+    idEnvio: Date.now(),
+    ordenId: orden.id,
+    direccion: datosEnvio.direccion,
+    telefono: datosEnvio.telefono,
+    metodo: datosEnvio.metodo || "Entrega a domicilio",
+    estado: "En preparación"
+  };
+
+  const envios = JSON.parse(localStorage.getItem("envios")) || [];
+  envios.push(envio);
+  localStorage.setItem("envios", JSON.stringify(envios));
+
+  console.log("Envío creado:", envio);
+  return envio;
+}
 // manejador del campo de búsqueda
 
 searchInput.addEventListener("input", () => {

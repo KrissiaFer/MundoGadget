@@ -95,12 +95,28 @@
     <!-- MODAL FACTURA (Agregado por RR) -->
     <div id="invoice-modal" class="modal">
       <div class="modal-content">
+             <!-- datos de envio -->
+        <div style="margin-top: 15px; text-align: left;">
+          <h3>Datos de envío</h3>
+          <label>Dirección</label>
+          <input
+            type="text"
+            id="direccion"
+            placeholder="Ej. San Salvador, Col. Escalón"
+            style="width: 100%; padding: 8px; margin-bottom: 10px;"
+          />
+          <label>Teléfono</label>
+          <input
+            type="text"
+            id="telefono"
+            placeholder="Ej. 7777-7777"
+            style="width: 100%; padding: 8px;"
+          />
+        </div>
         <span class="close" id="invoice-close">&times;</span>
         <div id="invoice-content"></div>
         <div style="text-align: center; margin-top: 20px">
-          <button id="confirm-purchase-btn" class="btn-checkout">
-            Confirmar y Cerrar
-          </button>
+         <button id="confirm-purchase-btn" onclick="myCart.confirmarCompra()">Confirmar compra</button>
           <button
             id="back-to-cart-btn"
             style="padding: 10px; margin-left: 10px"

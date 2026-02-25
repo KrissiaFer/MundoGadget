@@ -152,8 +152,30 @@ class CartItems {
             cartContainer.appendChild(itemElement);
         });
 
-        if (cartTotal) cartTotal.textContent = this.getTotal().toFixed(2);
-    }
+    if (cartTotal) cartTotal.textContent = this.getTotal().toFixed(2);
+}
+
+crearOrdenCompra() {
+    const carrito = [...this.cart];
+    const usuario = JSON.parse(localStorage.getItem("usuarioLogueado"));
+
+    if (carrito.length === 0) return null;
+
+    const orden = {
+        id: Date.now(),
+        usuario: usuario ? usuario.email : "Invitado",
+        productos: carrito,
+        total: this.getTotal(),
+        fecha: new Date().toLocaleString(),
+        estado: "Pendiente"
+    };
+
+    const ordenes = JSON.parse(localStorage.getItem("ordenes")) || [];
+    ordenes.push(orden);
+    localStorage.setItem("ordenes", JSON.stringify(ordenes));
+
+    return orden;
+}
 
     /* =========================================
        Facturación y Checkout
@@ -220,28 +242,44 @@ class CartItems {
         document.getElementById("invoice-modal").style.display = "block";
     }
 
-    // Confirma la compra y actualiza inventario (Paso 2 del checkout)
-    confirmPurchase() {
-        // Reducir stock en la memoria global (array 'products' de script.js)
-        if (typeof products !== "undefined" && Array.isArray(products)) {
-            this.cart.forEach((cartItem) => {
-                const product = products.find((p) => p.id === cartItem.id);
-                if (product) {
-                    product.stock = Math.max(0, product.stock - cartItem.quantity);
-                }
-            });
-            
-            // Actualizar la vista principal de productos
-            if (typeof renderProducts === "function" && typeof filteredProducts !== "undefined") {
-                renderProducts(filteredProducts);
-            }
-        }
-
-        // Limpieza final
-        this.clearCart();
-        document.getElementById("invoice-modal").style.display = "none";
-        this.showNotification("¡Gracias por su compra! El pedido ha sido procesado.", "success");
+confirmarCompra() {
+    const orden = this.crearOrdenCompra();
+    if (!orden) {
+        this.showNotification("No se pudo crear la orden", "error");
+        return;
     }
+
+    const direccion = document.getElementById("direccion")?.value;
+    const telefono = document.getElementById("telefono")?.value;
+
+    if (!direccion || !telefono) {
+        alert("Completa los datos de envío");
+        return;
+    }
+
+    // Crear ENVÍO
+    const envio = {
+        idEnvio: Date.now(),
+        ordenId: orden.id,
+        direccion,
+        telefono,
+        metodo: "Entrega a domicilio",
+        estado: "En preparación"
+    };
+
+    const envios = JSON.parse(localStorage.getItem("envios")) || [];
+    envios.push(envio);
+    localStorage.setItem("envios", JSON.stringify(envios));
+
+    console.log("ORDEN:", orden);
+    console.log("ENVÍO:", envio);
+
+    // Vaciar carrito SOLO aquí
+    this.clearCart();
+
+    document.getElementById("invoice-modal").style.display = "none";
+    this.showNotification("¡Orden y envío creados correctamente!", "success");
+}
 
     /* =========================================
        Sistema de Notificaciones (Toast)
