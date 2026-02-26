@@ -274,7 +274,7 @@ confirmarCompra() {
     console.log("ORDEN:", orden);
     console.log("ENVÍO:", envio);
 
-    // Vaciar carrito SOLO aquí
+    // Vaciar carrito
     this.clearCart();
 
     document.getElementById("invoice-modal").style.display = "none";

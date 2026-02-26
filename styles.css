@@ -42,6 +42,15 @@ body {
   justify-content: space-around;
   padding: 12px 30px;
   font-weight: bold;
+
+}
+.nav span:hover {
+  padding: 5px 10px;
+  background: #e53935;
+  box-shadow:0 6px 12px #613909 ;
+  border-radius: 4px ;
+  cursor: pointer;
+  transition: 0.4s;
 }
 
 /* GRID DE PRODUCTOS */
