@@ -6,7 +6,7 @@ let filteredProducts = [];
 let currentFilter = "all"; // valor del filtro de navegación
 
 /* ===== CARGAR PRODUCTOS DESDE JSON ===== */
-fetch("products.json")
+fetch("data/products.json")
   .then((response) => response.json())
   .then((data) => {
     products = data;
@@ -200,7 +200,7 @@ function crearEnvio(orden, datosEnvio) {
     direccion: datosEnvio.direccion,
     telefono: datosEnvio.telefono,
     metodo: datosEnvio.metodo || "Entrega a domicilio",
-    estado: "En preparación"
+    estado: "En preparación",
   };
 
   const envios = JSON.parse(localStorage.getItem("envios")) || [];

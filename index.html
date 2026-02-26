@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <title>Mundo Gadget</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="styles_cart.css" />
-    <link rel="stylesheet" href="styles_notifications.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles_cart.css" />
+    <link rel="stylesheet" href="css/styles_notifications.css" />
   </head>
 
   <body>
@@ -95,28 +95,30 @@
     <!-- MODAL FACTURA (Agregado por RR) -->
     <div id="invoice-modal" class="modal">
       <div class="modal-content">
-             <!-- datos de envio -->
-        <div style="margin-top: 15px; text-align: left;">
+        <!-- datos de envio -->
+        <div style="margin-top: 15px; text-align: left">
           <h3>Datos de envío</h3>
           <label>Dirección</label>
           <input
             type="text"
             id="direccion"
             placeholder="Ej. San Salvador, Col. Escalón"
-            style="width: 100%; padding: 8px; margin-bottom: 10px;"
+            style="width: 100%; padding: 8px; margin-bottom: 10px"
           />
           <label>Teléfono</label>
           <input
             type="text"
             id="telefono"
             placeholder="Ej. 7777-7777"
-            style="width: 100%; padding: 8px;"
+            style="width: 100%; padding: 8px"
           />
         </div>
         <span class="close" id="invoice-close">&times;</span>
         <div id="invoice-content"></div>
         <div style="text-align: center; margin-top: 20px">
-         <button id="confirm-purchase-btn" onclick="myCart.confirmarCompra()">Confirmar compra</button>
+          <button id="confirm-purchase-btn" onclick="myCart.confirmarCompra()">
+            Confirmar compra
+          </button>
           <button
             id="back-to-cart-btn"
             style="padding: 10px; margin-left: 10px"
@@ -131,7 +133,7 @@
     <div id="notification-container"></div>
 
     <!-- Scripts del carrito y notificaciones (Agregado por RR) -->
-    <script src="cart.js"></script>
-    <script src="script.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
