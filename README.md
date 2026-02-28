@@ -14,7 +14,14 @@ El sitio web se encuentra publicado en internet para su visualización en línea
 Las imágenes de los productos se cargan mediante URLs externas, por lo que no es necesario almacenar archivos de imágenes en el proyecto.
 
 ---
+## Integrantes 
+Henry Mauricio Peña Ramirez             PR251335
+Krissia Lissette Eguizabal Fernandez    EF251345
+Roger Ernesto Ramirez Rolin             RR251334
+Kevin Alfreso Romero Deras              RD221081
+Gabriela Guadalupe Merino Herández      MH203046
 
+---
 ## Estructura del proyecto
 
 MundoGadget/
